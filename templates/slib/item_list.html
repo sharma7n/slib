@@ -1,0 +1,13 @@
+{% extends "slib/base.html" %}
+
+{% block content %}
+    {% if item_list %}
+	    {% for item in item_list %}
+		    <ul>
+			    <li>{{ item.code }}</li>
+			</ul>
+		{% endfor %}
+	{% else %}
+	    <p>No items are available.</p>
+	{% endif %}
+{% endblock %}

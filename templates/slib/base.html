@@ -1,0 +1,27 @@
+<!-- Abridged from Django template documentation at: https://docs.djangoproject.com/en/1.9/ref/templates/language/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+	    {% load staticfiles %}
+	    <link rel="stylesheet" type="text/css" href="{% static 'slib/style.css' %}" />
+		<title>{% block title %}Title{% endblock %}</title>
+	</head>
+	
+	<body>
+	
+	    <div id="sidebar">
+		    {% block sidebar %}
+			<ul>
+			    <li><a href="/">Home</a></li>
+			</ul>
+			{% endblock %}
+		</div>
+		
+		<div id="content">
+		    {% block content %}{% endblock %}
+		</div>
+		
+	</body>
+	
+</html>
